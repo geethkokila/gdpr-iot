@@ -22,11 +22,22 @@
             <name>um</name>
             <description>The datasource used for um tables</description>
             <definition type="RDBMS">
-                <configuration>
+                <!-- <configuration>
                     <url>jdbc:h2:/tmp/wso2iot-3.2.0-update1-SNAPSHOT/repository/database/WSO2CARBON_DB;AUTO_SERVER=TRUE;DB_CLOSE_ON_EXIT=FALSE;LOCK_TIMEOUT=60000</url>
                     <username>wso2carbon</username>
                     <password>wso2carbon</password>
                     <driverClassName>org.h2.Driver</driverClassName>
+                    <maxActive>50</maxActive>
+                    <maxWait>60000</maxWait>
+                    <testOnBorrow>true</testOnBorrow>
+                    <validationQuery>SELECT 1</validationQuery>
+                    <validationInterval>30000</validationInterval>
+                </configuration> -->
+                <configuration>
+                    <url>jdbc:mysql://localhost:3306/usermgt?autoReconnect=true&amp;relaxAutoCommit=true</url>
+                    <username>root</username>
+                    <password></password>
+                    <driverClassName>com.mysql.cj.jdbc.Driver</driverClassName>
                     <maxActive>50</maxActive>
                     <maxWait>60000</maxWait>
                     <testOnBorrow>true</testOnBorrow>
